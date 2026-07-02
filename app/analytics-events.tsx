@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { AnalyticsEvent, trackEvent } from "../lib/analytics";
+import { type AnalyticsEvent, trackEvent } from "../lib/analytics";
 
 export function AnalyticsEvents() {
   useEffect(() => {
