@@ -1,11 +1,24 @@
+import { AnalyticsEvents } from "./analytics-events";
+
 export default function Home() {
   return (
     <main>
+      <AnalyticsEvents />
       <section className="section hero">
         <p className="badge">Pré-venda imobiliária · Indaiatuba/SP</p>
         <h1>Eduque o comprador antes do corretor entrar.</h1>
         <p className="heroText">Transforme contatos soltos em leads com contexto, prioridade e próximo passo. A pré-venda inteligente organiza a jornada inicial do comprador e entrega para a imobiliária informações úteis antes do atendimento humano.</p>
-        <div className="actions"><a className="button primary" href="#contato">Agendar diagnóstico</a><a className="button secondary" href="#exemplo-lead">Ver exemplo de lead</a></div>
+        <div className="actions">
+          <a
+            className="button primary"
+            href="#contato"
+            data-analytics-event="cta_simulation_clicked"
+            data-analytics-cta-type="diagnostico"
+          >
+            Agendar diagnóstico
+          </a>
+          <a className="button secondary" href="#exemplo-lead">Ver exemplo de lead</a>
+        </div>
       </section>
       <section className="section gridTwo"><div><p className="eyebrow">Dor da imobiliária</p><h2>Lead sem contexto não é oportunidade. É custo operacional.</h2></div><div className="copy"><p>O corretor perde tempo explicando renda, entrada, FGTS, parcela, subsídio e documentação antes de saber se existe potencial real de compra.</p><strong>O problema não é apenas gerar lead. É saber qual lead merece o tempo do corretor.</strong></div></section>
       <section className="section dark"><p className="eyebrow light">Como funciona</p><h2>Um funil simples antes do atendimento comercial.</h2><div className="flow"><div className="flowItem"><span>01</span><p>Comprador acessa o simulador</p></div><div className="flowItem"><span>02</span><p>Informa renda, entrada, FGTS, bairro e interesse</p></div><div className="flowItem"><span>03</span><p>Recebe orientação inicial</p></div><div className="flowItem"><span>04</span><p>É classificado por maturidade e prioridade</p></div><div className="flowItem"><span>05</span><p>A imobiliária recebe um resumo útil</p></div><div className="flowItem"><span>06</span><p>O corretor atende com mais contexto</p></div></div></section>
